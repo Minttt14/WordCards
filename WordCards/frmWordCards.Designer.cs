@@ -52,14 +52,17 @@
             this.sssWord.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.sssWord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslMessage});
-            this.sssWord.Location = new System.Drawing.Point(0, 703);
+            this.sssWord.Location = new System.Drawing.Point(0, 704);
             this.sssWord.Name = "sssWord";
-            this.sssWord.Size = new System.Drawing.Size(1351, 40);
+            this.sssWord.Padding = new System.Windows.Forms.Padding(0, 0, 13, 0);
+            this.sssWord.Size = new System.Drawing.Size(1352, 40);
             this.sssWord.TabIndex = 0;
             this.sssWord.Text = "statusStrip1";
             // 
             // tsslMessage
             // 
+            this.tsslMessage.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tsslMessage.ForeColor = System.Drawing.Color.Red;
             this.tsslMessage.Name = "tsslMessage";
             this.tsslMessage.Size = new System.Drawing.Size(114, 30);
             this.tsslMessage.Text = "Message";
@@ -71,9 +74,11 @@
             this.lstWordList.FormattingEnabled = true;
             this.lstWordList.ItemHeight = 31;
             this.lstWordList.Location = new System.Drawing.Point(0, 0);
+            this.lstWordList.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.lstWordList.Name = "lstWordList";
-            this.lstWordList.Size = new System.Drawing.Size(312, 703);
+            this.lstWordList.Size = new System.Drawing.Size(312, 704);
             this.lstWordList.TabIndex = 1;
+            this.lstWordList.Click += new System.EventHandler(this.lstWordList_Click);
             // 
             // palMain
             // 
@@ -86,8 +91,9 @@
             this.palMain.Controls.Add(this.txtWord);
             this.palMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.palMain.Location = new System.Drawing.Point(312, 0);
+            this.palMain.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.palMain.Name = "palMain";
-            this.palMain.Size = new System.Drawing.Size(1039, 703);
+            this.palMain.Size = new System.Drawing.Size(1040, 704);
             this.palMain.TabIndex = 2;
             // 
             // txtHelp
@@ -97,10 +103,11 @@
             this.txtHelp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHelp.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtHelp.ForeColor = System.Drawing.Color.Red;
-            this.txtHelp.Location = new System.Drawing.Point(830, 526);
+            this.txtHelp.Location = new System.Drawing.Point(803, 526);
+            this.txtHelp.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtHelp.Multiline = true;
             this.txtHelp.Name = "txtHelp";
-            this.txtHelp.Size = new System.Drawing.Size(164, 60);
+            this.txtHelp.Size = new System.Drawing.Size(165, 60);
             this.txtHelp.TabIndex = 5;
             this.txtHelp.Text = "Enter 下一個 Space 重複";
             // 
@@ -108,9 +115,10 @@
             // 
             this.btnAutoPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAutoPlay.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnAutoPlay.Location = new System.Drawing.Point(843, 247);
+            this.btnAutoPlay.Location = new System.Drawing.Point(817, 261);
+            this.btnAutoPlay.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnAutoPlay.Name = "btnAutoPlay";
-            this.btnAutoPlay.Size = new System.Drawing.Size(132, 51);
+            this.btnAutoPlay.Size = new System.Drawing.Size(132, 52);
             this.btnAutoPlay.TabIndex = 4;
             this.btnAutoPlay.Text = "Play";
             this.btnAutoPlay.UseVisualStyleBackColor = true;
@@ -119,9 +127,10 @@
             // 
             this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picLogo.Image = global::WordCards.Properties.Resources.WordCards_Logo;
-            this.picLogo.Location = new System.Drawing.Point(843, 65);
+            this.picLogo.Location = new System.Drawing.Point(788, 47);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(132, 145);
+            this.picLogo.Size = new System.Drawing.Size(187, 193);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 3;
             this.picLogo.TabStop = false;
@@ -135,10 +144,11 @@
             this.txtExplain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtExplain.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtExplain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtExplain.Location = new System.Drawing.Point(94, 285);
+            this.txtExplain.Location = new System.Drawing.Point(93, 284);
+            this.txtExplain.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtExplain.Multiline = true;
             this.txtExplain.Name = "txtExplain";
-            this.txtExplain.Size = new System.Drawing.Size(566, 264);
+            this.txtExplain.Size = new System.Drawing.Size(565, 264);
             this.txtExplain.TabIndex = 2;
             this.txtExplain.Text = "<aba-=abax-:一種計算工具>+<-us: calculus 小圓石>";
             // 
@@ -150,9 +160,10 @@
             this.txtPhonogram.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhonogram.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtPhonogram.ForeColor = System.Drawing.Color.Green;
-            this.txtPhonogram.Location = new System.Drawing.Point(94, 189);
+            this.txtPhonogram.Location = new System.Drawing.Point(93, 188);
+            this.txtPhonogram.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtPhonogram.Name = "txtPhonogram";
-            this.txtPhonogram.Size = new System.Drawing.Size(257, 50);
+            this.txtPhonogram.Size = new System.Drawing.Size(454, 50);
             this.txtPhonogram.TabIndex = 1;
             this.txtPhonogram.Text = "ˋæbəkəs";
             // 
@@ -164,9 +175,10 @@
             this.txtWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtWord.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtWord.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtWord.Location = new System.Drawing.Point(94, 65);
+            this.txtWord.Location = new System.Drawing.Point(93, 64);
+            this.txtWord.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtWord.Name = "txtWord";
-            this.txtWord.Size = new System.Drawing.Size(257, 86);
+            this.txtWord.Size = new System.Drawing.Size(548, 86);
             this.txtWord.TabIndex = 0;
             this.txtWord.Text = "abacus";
             // 
@@ -178,15 +190,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1351, 743);
+            this.ClientSize = new System.Drawing.Size(1352, 744);
             this.Controls.Add(this.palMain);
             this.Controls.Add(this.lstWordList);
             this.Controls.Add(this.sssWord);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(685, 400);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.MinimumSize = new System.Drawing.Size(589, 299);
             this.Name = "frmWordCards";
             this.Text = "單字卡";
+            this.Load += new System.EventHandler(this.frmWordCards_Load);
             this.sssWord.ResumeLayout(false);
             this.sssWord.PerformLayout();
             this.palMain.ResumeLayout(false);
