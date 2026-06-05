@@ -34,12 +34,12 @@
             this.tsslMessage = new System.Windows.Forms.ToolStripStatusLabel();
             this.lstWordList = new System.Windows.Forms.ListBox();
             this.palMain = new System.Windows.Forms.Panel();
-            this.txtWord = new System.Windows.Forms.TextBox();
-            this.txtPhonogram = new System.Windows.Forms.TextBox();
-            this.txtExplain = new System.Windows.Forms.TextBox();
+            this.txtHelp = new System.Windows.Forms.TextBox();
             this.btnAutoPlay = new System.Windows.Forms.Button();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.txtHelp = new System.Windows.Forms.TextBox();
+            this.txtExplain = new System.Windows.Forms.TextBox();
+            this.txtPhonogram = new System.Windows.Forms.TextBox();
+            this.txtWord = new System.Windows.Forms.TextBox();
             this.timPlayer = new System.Windows.Forms.Timer(this.components);
             this.sssWord.SuspendLayout();
             this.palMain.SuspendLayout();
@@ -90,49 +90,19 @@
             this.palMain.Size = new System.Drawing.Size(1039, 703);
             this.palMain.TabIndex = 2;
             // 
-            // txtWord
+            // txtHelp
             // 
-            this.txtWord.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
-            this.txtWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtWord.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtWord.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtWord.Location = new System.Drawing.Point(94, 65);
-            this.txtWord.Name = "txtWord";
-            this.txtWord.Size = new System.Drawing.Size(257, 86);
-            this.txtWord.TabIndex = 0;
-            this.txtWord.Text = "abacus";
-            // 
-            // txtPhonogram
-            // 
-            this.txtPhonogram.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhonogram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
-            this.txtPhonogram.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhonogram.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPhonogram.ForeColor = System.Drawing.Color.Green;
-            this.txtPhonogram.Location = new System.Drawing.Point(94, 189);
-            this.txtPhonogram.Name = "txtPhonogram";
-            this.txtPhonogram.Size = new System.Drawing.Size(257, 50);
-            this.txtPhonogram.TabIndex = 1;
-            this.txtPhonogram.Text = "ˋæbəkəs";
-            // 
-            // txtExplain
-            // 
-            this.txtExplain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtExplain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
-            this.txtExplain.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtExplain.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtExplain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtExplain.Location = new System.Drawing.Point(94, 285);
-            this.txtExplain.Multiline = true;
-            this.txtExplain.Name = "txtExplain";
-            this.txtExplain.Size = new System.Drawing.Size(566, 264);
-            this.txtExplain.TabIndex = 2;
-            this.txtExplain.Text = "<aba-=abax-:一種計算工具>+<-us: calculus 小圓石>";
+            this.txtHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
+            this.txtHelp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtHelp.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtHelp.ForeColor = System.Drawing.Color.Red;
+            this.txtHelp.Location = new System.Drawing.Point(830, 526);
+            this.txtHelp.Multiline = true;
+            this.txtHelp.Name = "txtHelp";
+            this.txtHelp.Size = new System.Drawing.Size(164, 60);
+            this.txtHelp.TabIndex = 5;
+            this.txtHelp.Text = "Enter 下一個 Space 重複";
             // 
             // btnAutoPlay
             // 
@@ -156,19 +126,49 @@
             this.picLogo.TabIndex = 3;
             this.picLogo.TabStop = false;
             // 
-            // txtHelp
+            // txtExplain
             // 
-            this.txtHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
-            this.txtHelp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHelp.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtHelp.ForeColor = System.Drawing.Color.Red;
-            this.txtHelp.Location = new System.Drawing.Point(830, 526);
-            this.txtHelp.Multiline = true;
-            this.txtHelp.Name = "txtHelp";
-            this.txtHelp.Size = new System.Drawing.Size(164, 60);
-            this.txtHelp.TabIndex = 5;
-            this.txtHelp.Text = "Enter 下一個 Space 重複";
+            this.txtExplain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtExplain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
+            this.txtExplain.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtExplain.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtExplain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtExplain.Location = new System.Drawing.Point(94, 285);
+            this.txtExplain.Multiline = true;
+            this.txtExplain.Name = "txtExplain";
+            this.txtExplain.Size = new System.Drawing.Size(566, 264);
+            this.txtExplain.TabIndex = 2;
+            this.txtExplain.Text = "<aba-=abax-:一種計算工具>+<-us: calculus 小圓石>";
+            // 
+            // txtPhonogram
+            // 
+            this.txtPhonogram.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhonogram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
+            this.txtPhonogram.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhonogram.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPhonogram.ForeColor = System.Drawing.Color.Green;
+            this.txtPhonogram.Location = new System.Drawing.Point(94, 189);
+            this.txtPhonogram.Name = "txtPhonogram";
+            this.txtPhonogram.Size = new System.Drawing.Size(257, 50);
+            this.txtPhonogram.TabIndex = 1;
+            this.txtPhonogram.Text = "ˋæbəkəs";
+            // 
+            // txtWord
+            // 
+            this.txtWord.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
+            this.txtWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtWord.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtWord.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtWord.Location = new System.Drawing.Point(94, 65);
+            this.txtWord.Name = "txtWord";
+            this.txtWord.Size = new System.Drawing.Size(257, 86);
+            this.txtWord.TabIndex = 0;
+            this.txtWord.Text = "abacus";
             // 
             // timPlayer
             // 
