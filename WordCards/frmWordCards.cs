@@ -90,6 +90,25 @@ namespace WordCards
                 PlayWord(_WordList[idx]);
             }
         }
+        /// <summary>
+        /// 將單字清單的選項移到下一個
+        /// </summary>
+        private void NextWordList()
+        {
+            // 將焦點移到單字清單
+            lstWordList.Focus();
+            // 判斷目前選的下一項是否超過清單的項目數
+            if (lstWordList.SelectedIndex + 1 >= lstWordList.Items.Count)
+                lstWordList.SelectedIndex = 0; // 如果超過就回到第一項
+            else
+                lstWordList.SelectedIndex++; // 如果沒有就選擇下一項
+                                             // 計算目前 lstWordList 顯示的行數
+            int lstRows = lstWordList.Height / lstWordList.GetItemHeight(0);
+            // 如果目前選的項目大於 lstRows / 2
+            if (lstWordList.SelectedIndex >= lstRows / 2)
+                // 將 lstWordList 的 選項保持在中間
+                lstWordList.TopIndex = lstWordList.SelectedIndex - lstRows / 2;
+        }
         private void frmWordCards_Load(object sender, EventArgs e)
         {
             string[] lines;
@@ -131,6 +150,78 @@ namespace WordCards
                     // 顯示並播放目前選取的單字
                     PlaySelectedWord();
                 }
+        }
+
+        private void timPlayer_Tick(object sender, EventArgs e)
+        {
+            // 移到下一個單字
+            NextWordList();
+            // 顯示並播放目前選取的單字
+            PlaySelectedWord();
+        }
+
+        private void btnAutoPlay_Click(object sender, EventArgs e)
+        {
+            // 將焦點移到單字清單
+            lstWordList.Focus();
+            // 若目前不是自動播放
+            if (isPlay == false)
+            {
+                btnAutoPlay.Text = "Stop";
+                isPlay = true;
+                // 顯示並播放目前選取的單字
+                PlaySelectedWord();
+                timPlayer.Start();
+            }
+            else
+            {
+                btnAutoPlay.Text = "Play";
+                isPlay = false;
+                timPlayer.Stop();
+            }
+
+        }
+
+        private void frmWordCards_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (isPlay == true)
+                return;
+            switch (e.KeyChar)
+            {
+                case (char)Keys.Return:
+                    // 當按下 Enter 時，播放下一個單字
+                    NextWordList();
+                    // 顯示並播放目前選取的單字
+                    PlaySelectedWord();
+                    e.Handled = true;
+                    break;
+                case (char)Keys.Space:
+                    // 當按下 Space 時，重複播放目前單字
+                    if (lstWordList.SelectedIndex >= 0)
+                    {
+                        // 顯示並播放目前選取的單字
+                        PlaySelectedWord();
+                    }
+                    e.Handled = true;
+                    break;
+            }
+
+        }
+
+        private void lstWordList_DoubleClick(object sender, EventArgs e)
+        {
+            lstWordList.Focus();
+            // 目前選取的索引
+            int idx = lstWordList.SelectedIndex;
+            frmEditWord edit = new frmEditWord(_WordList[idx]);
+            DialogResult result = edit.ShowDialog(this);
+            // 如果使用者按下 儲存 按鈕
+            if (result == DialogResult.Yes)
+            {
+                // 顯示並播放目前選取的單字
+                PlaySelectedWord();
+            }
+
         }
     }
 }

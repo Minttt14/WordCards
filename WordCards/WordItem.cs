@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WordCards
 {
-    internal class WordItem : object
+    public class WordItem : object
     {
         public string Word { get; set; }
         public string Phonogram { get; set; }

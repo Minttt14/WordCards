@@ -36,11 +36,11 @@
             this.palMain = new System.Windows.Forms.Panel();
             this.txtHelp = new System.Windows.Forms.TextBox();
             this.btnAutoPlay = new System.Windows.Forms.Button();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.txtExplain = new System.Windows.Forms.TextBox();
             this.txtPhonogram = new System.Windows.Forms.TextBox();
             this.txtWord = new System.Windows.Forms.TextBox();
             this.timPlayer = new System.Windows.Forms.Timer(this.components);
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.sssWord.SuspendLayout();
             this.palMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -79,6 +79,7 @@
             this.lstWordList.Size = new System.Drawing.Size(312, 704);
             this.lstWordList.TabIndex = 1;
             this.lstWordList.Click += new System.EventHandler(this.lstWordList_Click);
+            this.lstWordList.DoubleClick += new System.EventHandler(this.lstWordList_DoubleClick);
             // 
             // palMain
             // 
@@ -101,39 +102,28 @@
             this.txtHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(242)))));
             this.txtHelp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHelp.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtHelp.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtHelp.ForeColor = System.Drawing.Color.Red;
-            this.txtHelp.Location = new System.Drawing.Point(803, 526);
+            this.txtHelp.Location = new System.Drawing.Point(760, 475);
             this.txtHelp.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtHelp.Multiline = true;
             this.txtHelp.Name = "txtHelp";
-            this.txtHelp.Size = new System.Drawing.Size(165, 60);
+            this.txtHelp.Size = new System.Drawing.Size(231, 109);
             this.txtHelp.TabIndex = 5;
-            this.txtHelp.Text = "Enter 下一個 Space 重複";
+            this.txtHelp.Text = "Enter 下一個  Space 重複";
             // 
             // btnAutoPlay
             // 
             this.btnAutoPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAutoPlay.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnAutoPlay.Location = new System.Drawing.Point(817, 261);
+            this.btnAutoPlay.Location = new System.Drawing.Point(783, 304);
             this.btnAutoPlay.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnAutoPlay.Name = "btnAutoPlay";
-            this.btnAutoPlay.Size = new System.Drawing.Size(132, 52);
+            this.btnAutoPlay.Size = new System.Drawing.Size(167, 67);
             this.btnAutoPlay.TabIndex = 4;
             this.btnAutoPlay.Text = "Play";
             this.btnAutoPlay.UseVisualStyleBackColor = true;
-            // 
-            // picLogo
-            // 
-            this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picLogo.Image = global::WordCards.Properties.Resources.WordCards_Logo;
-            this.picLogo.Location = new System.Drawing.Point(788, 47);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(187, 193);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 3;
-            this.picLogo.TabStop = false;
+            this.btnAutoPlay.Click += new System.EventHandler(this.btnAutoPlay_Click);
             // 
             // txtExplain
             // 
@@ -185,6 +175,19 @@
             // timPlayer
             // 
             this.timPlayer.Interval = 2000;
+            this.timPlayer.Tick += new System.EventHandler(this.timPlayer_Tick);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picLogo.Image = global::WordCards.Properties.Resources.WordCards_Logo;
+            this.picLogo.Location = new System.Drawing.Point(752, 47);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(223, 234);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
             // 
             // frmWordCards
             // 
@@ -199,8 +202,10 @@
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.MinimumSize = new System.Drawing.Size(589, 299);
             this.Name = "frmWordCards";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "單字卡";
             this.Load += new System.EventHandler(this.frmWordCards_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmWordCards_KeyPress);
             this.sssWord.ResumeLayout(false);
             this.sssWord.PerformLayout();
             this.palMain.ResumeLayout(false);
