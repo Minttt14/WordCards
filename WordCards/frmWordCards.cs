@@ -220,8 +220,9 @@ namespace WordCards
             {
                 // 顯示並播放目前選取的單字
                 PlaySelectedWord();
+                // 儲存單字
+                _WordList.SaveToFile(strWordFile);
             }
-
         }
     }
 }

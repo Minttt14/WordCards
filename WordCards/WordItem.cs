@@ -36,5 +36,17 @@ namespace WordCards
         {
             return Word;
         }
+        /// <summary>
+        /// 將 WordItem 物件轉換為字串
+        /// 格式為 "Word\tPhonogram\tSoundPath\tExplain"
+        /// </summary>
+        /// <returns>字串，格式為 "Word\tPhonogram\tSoundPath\tExplain"</returns>
+        public string ToLineString()
+        {
+            // 將 Explain 屬性中的換行符號替換為\t，以便在字串中顯示。
+            string strExplain = Explain.Replace(Environment.NewLine, "\t");
+            // 將 WordItem 物件轉換為字串
+            return $"{Word}\t{Phonogram}\t{SoundPath}\t{strExplain}";
+        }
     }
 }

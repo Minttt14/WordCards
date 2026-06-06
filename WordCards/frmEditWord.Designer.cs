@@ -45,8 +45,10 @@
             // 
             // grpWord
             // 
+            this.grpWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(253)))));
             this.grpWord.Controls.Add(this.txtWord);
             this.grpWord.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(95)))), ((int)(((byte)(165)))));
             this.grpWord.Location = new System.Drawing.Point(71, 34);
             this.grpWord.Name = "grpWord";
             this.grpWord.Size = new System.Drawing.Size(491, 109);
@@ -56,8 +58,10 @@
             // 
             // grpPhonogram
             // 
+            this.grpPhonogram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(248)))), ((int)(((byte)(244)))));
             this.grpPhonogram.Controls.Add(this.txtPhonogram);
             this.grpPhonogram.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpPhonogram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(110)))), ((int)(((byte)(86)))));
             this.grpPhonogram.Location = new System.Drawing.Point(71, 155);
             this.grpPhonogram.Name = "grpPhonogram";
             this.grpPhonogram.Size = new System.Drawing.Size(491, 109);
@@ -67,8 +71,10 @@
             // 
             // grpSoundPath
             // 
+            this.grpSoundPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.grpSoundPath.Controls.Add(this.txtSoundPath);
             this.grpSoundPath.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpSoundPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(74)))), ((int)(((byte)(183)))));
             this.grpSoundPath.Location = new System.Drawing.Point(71, 284);
             this.grpSoundPath.Name = "grpSoundPath";
             this.grpSoundPath.Size = new System.Drawing.Size(491, 109);
@@ -78,8 +84,10 @@
             // 
             // grpExplain
             // 
+            this.grpExplain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(245)))), ((int)(((byte)(238)))));
             this.grpExplain.Controls.Add(this.txtExplain);
             this.grpExplain.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpExplain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(79)))), ((int)(((byte)(11)))));
             this.grpExplain.Location = new System.Drawing.Point(71, 408);
             this.grpExplain.Name = "grpExplain";
             this.grpExplain.Size = new System.Drawing.Size(491, 322);
@@ -89,28 +97,36 @@
             // 
             // txtWord
             // 
+            this.txtWord.BackColor = System.Drawing.Color.White;
+            this.txtWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtWord.Enabled = false;
             this.txtWord.Location = new System.Drawing.Point(16, 43);
             this.txtWord.Name = "txtWord";
-            this.txtWord.Size = new System.Drawing.Size(461, 50);
+            this.txtWord.Size = new System.Drawing.Size(461, 43);
             this.txtWord.TabIndex = 0;
             // 
             // txtPhonogram
             // 
+            this.txtPhonogram.BackColor = System.Drawing.Color.White;
+            this.txtPhonogram.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhonogram.Location = new System.Drawing.Point(16, 46);
             this.txtPhonogram.Name = "txtPhonogram";
-            this.txtPhonogram.Size = new System.Drawing.Size(461, 50);
+            this.txtPhonogram.Size = new System.Drawing.Size(461, 43);
             this.txtPhonogram.TabIndex = 1;
             // 
             // txtSoundPath
             // 
+            this.txtSoundPath.BackColor = System.Drawing.Color.White;
+            this.txtSoundPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoundPath.Location = new System.Drawing.Point(16, 47);
             this.txtSoundPath.Name = "txtSoundPath";
-            this.txtSoundPath.Size = new System.Drawing.Size(461, 50);
+            this.txtSoundPath.Size = new System.Drawing.Size(461, 43);
             this.txtSoundPath.TabIndex = 2;
             // 
             // txtExplain
             // 
+            this.txtExplain.BackColor = System.Drawing.Color.White;
+            this.txtExplain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtExplain.Location = new System.Drawing.Point(16, 49);
             this.txtExplain.Multiline = true;
             this.txtExplain.Name = "txtExplain";
@@ -119,20 +135,23 @@
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(95)))), ((int)(((byte)(165)))));
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.btnSave.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(420, 749);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(142, 63);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "儲存";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmEditWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(249)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(640, 849);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.grpExplain);
